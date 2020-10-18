@@ -2,8 +2,15 @@
 <%= column_chart @last_12_months, title: "Ultimos 12 Meses" %>
 <%= column_chart @quantity_12_month, title: "Ventas Mensuales" %>
 <%= column_chart @average_12_month, title: "Promedio 12 Meses" %>
+<hr>
 <h2>Ventas por origen</h2>
 <%= pie_chart @pie_chart_12_month, title: "Ultimos 12 Meses" %>
 <%= pie_chart @pie_chart_6_month, title: "Ultimos 6 Meses" %>
 <%= pie_chart @pie_chart_3_month, title: "Ultimos 3 Meses" %>
 <%= pie_chart @pie_chart_last_month, title: "Ultimo Mes" %>
+<hr>
+<h2>Ventas por tipo mezcla</h2>
+<%= pie_chart @pie_12_month_by_blend, title: "Ultimos 12 Meses" %>
+<%= pie_chart @pie_6_monthby_by_blend, title: "Ultimos 6 Meses" %>
+<%= pie_chart @pie_3_month_by_blend, title: "Ultimos 3 Meses" %>
+<%= pie_chart @pie_last_month_by_blend, title: "Ultimo Mes" %>

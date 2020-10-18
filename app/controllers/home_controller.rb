@@ -31,5 +31,21 @@ class HomeController < ApplicationController
     @pie_chart_last_month = Sale.where(created_at: 30.days.ago..Date.today)
                           .group(:origin)
                           .count
+
+    @pie_12_month_by_blend = Sale.where(created_at: 11.months.ago..Date.today)
+                          .group(:origin)
+                          .count
+
+    @pie_6_monthby_by_blend = Sale.where(created_at: 5.months.ago..Date.today)
+                          .group(:origin)
+                          .count
+
+    @pie_3_month_by_blend = Sale.where(created_at: 2.months.ago..Date.today)
+                          .group(:origin)
+                          .count
+
+    @pie_last_month_by_blend = Sale.where(created_at: 30.days.ago..Date.today)
+                          .group(:origin)
+                          .count
   end
 end
